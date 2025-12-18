@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+        <!--  Conexión a SQLite  -->
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:biblioteca.db</property>
+        <property name="hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+        <!--  Mostrar SQL y crear tablas automáticamente  -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <!--  Clase mapeada  -->
+        <mapping class="com.biblioteca.model.Libro"/>
+    </session-factory>
+</hibernate-configuration>
